@@ -29,3 +29,8 @@ Credits:
 		jQuery (jquery.com)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
 
+all in 1 push:
+git add .; git commit -m "1009"; git push
+
+web link:
+https://kyleauessexmsc.github.io/eportfolio-kyleau/

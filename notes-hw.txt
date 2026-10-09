@@ -1,0 +1,146 @@
+ok below is the brief summary of the lecture concepts/knowledges. I think we don't need to cover/mention all of them in the hw3 (word count is limited to ~2,000 words!). We just need to pick some to discuss, extend or elaborate. If you need more lecture info of the chosen concepts/sections, please tell me to give you more.
+[brief lecture summary]
+Unit 1 Seminar
+Title: Introduction to Cloud Computing and Reflection on Learning Goals
+Topic knowledge objectives:
+
+    Understand the basics of cloud computing models (IaaS, PaaS, SaaS).
+    Reflect on personal learning objectives for the module and set goals.
+
+Topic skills objectives:
+
+    Articulate the differences between cloud service models and their applications.
+    Explore how setting personal learning goals and reflective practice can enhance comprehension of complex concepts in cloud computing.
+
+Questions
+
+    What are the main differences between IaaS, PaaS, and SaaS? Provide examples of each.
+    How can understanding these cloud models impact an organisation’s choice of cloud solutions?
+    Reflect on your initial goals for this module. What specific areas of cloud computing are you most interested in learning about?
+    How do you plan to engage in reflective practice throughout this module to maximise your understanding of cloud concepts?
+
+Come prepared to the session:
+
+    Read introductory material on cloud service models.
+    Draft your personal learning goals for this module and bring them to the session for discussion.
+=================================
+Unit 4 Seminar
+Title: Cloud Architecture Frameworks and Infrastructure as Code (IaC)
+Topic knowledge objectives:
+
+    Explore TOGAF and Infrastructure as Code (IaC) frameworks and their applications in cloud environments.
+    Discuss the benefits and challenges of automating infrastructure with IaC.
+
+Topic skills objectives:
+
+    Develop an understanding of TOGAF’s role in structured cloud architecture.
+    Evaluate the advantages and limitations of IaC in maintaining cloud infrastructure.
+
+Questions
+
+    How does TOGAF help in planning and structuring cloud architecture?
+    What are the benefits of using Infrastructure as Code in cloud environments?
+    What challenges have you encountered or anticipate when implementing IaC?
+    In your view, how can automation tools impact the scalability and reliability of cloud systems?
+
+Come prepared to the session:
+
+    Review introductory materials on TOGAF and IaC.
+    Draft responses to the discussion questions, focusing on real-world applications or hypothetical scenarios.
+=================================
+Unit 6 Seminar
+Title: AI-Driven Cloud Computing and Cloud Design Tools
+Topic knowledge objectives:
+
+    Understand how AI can enhance cloud operations and review the tools used in cloud design.
+    Discuss the practical applications of AI in automating cloud management.
+
+Topic skills objectives:
+
+    Explore AI-driven tools and methods to enhance cloud security, automation, and cost efficiency.
+    Examine the use of scripting and GUI-based tools in cloud setup and management.
+
+Questions
+
+    How can AI-based tools improve cloud performance and security?
+    What are some practical applications of AI in cloud management that you’ve encountered or read about?
+    Discuss the differences between using scripting (e.g., Bash) vs. GUI-based tools for cloud management.
+    How might AI-driven automation affect the role of cloud administrators in the future?
+
+Come prepared to the session:
+
+    Research the use of AI in cloud computing and bring examples to share.
+    Practice using a basic scripting tool or GUI-based tool in cloud management and document your experience.
+=================================
+Unit 8 Seminar
+Title: Cloud-Native Technologies and Hybrid Cloud Solutions
+Topic knowledge objectives:
+
+    Review cloud-native technologies like the 12-Factor App and Kubernetes.
+    Explore hybrid cloud solutions and the role of Edge Computing.
+
+Topic skills objectives:
+
+    Understand the principles of cloud-native app development and deployment.
+    Evaluate hybrid cloud and edge computing as solutions for modern enterprises with specific needs.
+
+Questions
+
+    How does the 12-Factor App methodology support cloud-native development?
+    In what situations would a business benefit from using Kubernetes for container orchestration?
+    What are the main advantages and challenges of hybrid cloud and edge computing?
+    How can organisations address the issue of data sovereignty in hybrid cloud environments?
+
+Come prepared to the session:
+
+    Review case studies on Kubernetes deployments and edge computing.
+    Come prepared with examples of hybrid cloud solutions used in real-world applications.
+=================================
+Unit 10 Seminar
+Title: Cloud Security and Disaster Recovery
+Topic knowledge objectives:
+
+    Understand cloud security best practices and the importance of disaster recovery (DR) in cloud environments.
+    Examine compliance requirements such as ISO/IEC 27001 and GDPR.
+
+Topic skills objectives:
+
+    Identify potential security vulnerabilities in cloud systems and discuss strategies to mitigate them.
+    Develop a high-level DR plan that incorporates cloud technologies.
+
+Questions
+
+    What are the biggest security threats to cloud environments today?
+    How can organisations balance security and compliance in cloud operations?
+    Why is a disaster recovery plan essential for cloud-based applications?
+    How would you design a basic DR plan for a small business using cloud services?
+
+Come prepared to the session:
+
+    Read about cloud security standards and compliance.
+    Draft a basic outline for a DR plan and be prepared to discuss your approach.
+=================================
+Unit 12 Seminar
+Title: Future Trends in AI and Cloud Computing
+Topic knowledge objectives:
+
+    Explore future trends in cloud computing, focusing on the integration of AI, Blockchain, and Quantum Computing.
+    Discuss the potential of these technologies to transform cloud operations.
+
+Topic skills objectives:
+
+    Assess how emerging technologies like AI and quantum computing may impact cloud infrastructure.
+    Predict future developments in cloud computing and their implications for IT professionals.
+
+Questions
+
+    How is AI expected to shape the future of cloud computing?
+    What role might Blockchain play in enhancing cloud security?
+    Discuss the potential of Quantum Computing in solving complex cloud-based computations.
+    How can IT professionals stay updated with rapidly evolving cloud technologies?
+
+Come prepared to the session:
+
+    Research emerging cloud computing technologies and prepare a brief on one trend that interests you.
+    Think about how these technologies might influence your own career in cloud computing.
+=================================
