@@ -24,8 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * Re-initialise the sidebar menu behaviour (open/close toggles).
- * This replicates the logic from Editorial's main.js for the #menu element.
+ * Re-initialise Editorial's sidebar behaviour:
+ *  1. Collapsible menu openers
+ *  2. Sidebar hide/show toggle (for <= large breakpoints)
  */
 function reinitSidebar() {
     var $ = window.jQuery;
@@ -33,29 +34,72 @@ function reinitSidebar() {
         return;
     }
 
+    var $sidebar = $('#sidebar');
+    var $window = $(window);
+
+    // --- 1. Re-bind the collapsible menu openers ---
     var $menu = $('#menu');
+    var $menu_openers = $menu.children('ul').find('.opener');
 
-    // Re-bind the opener click handlers for collapsible sections
-    $menu.find('.opener').each(function () {
-        var $opener = $(this);
-
-        // Remove any existing handlers to avoid duplicates
-        $opener.off('click');
-
-        $opener.on('click', function (event) {
+    $menu_openers.each(function () {
+        var $this = $(this);
+        $this.off('click');
+        $this.on('click', function (event) {
             event.preventDefault();
-            event.stopPropagation();
-
-            var $li = $opener.parent();
-            var $ul = $li.children('ul');
-
-            if ($li.hasClass('active')) {
-                $li.removeClass('active');
-                $ul.slideUp(200);
-            } else {
-                $li.addClass('active');
-                $ul.slideDown(200);
-            }
+            $menu_openers.not($this).removeClass('active');
+            $this.toggleClass('active');
+            $window.triggerHandler('resize.sidebar-lock');
         });
     });
+
+    // --- 2. Re-create the sidebar toggle element ---
+    // main.js already appended a .toggle element, but it was overwritten
+    // when we replaced #sidebar's innerHTML. We re-create it here.
+    var $existingToggle = $sidebar.find('.toggle');
+    if ($existingToggle.length === 0) {
+        $('<a href="#sidebar" class="toggle">Toggle</a>')
+            .appendTo($sidebar)
+            .on('click', function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                $sidebar.toggleClass('inactive');
+            });
+    }
+
+    // --- 3. Re-bind link clicks (hide sidebar on <= large before navigating) ---
+    $sidebar.on('click', 'a', function (event) {
+        // Only apply on smaller breakpoints
+        if (window.matchMedia('(min-width: 1281px)').matches) {
+            return;
+        }
+
+        var $a = $(this);
+        var href = $a.attr('href');
+        var target = $a.attr('target');
+
+        // Skip the toggle element
+        if ($a.hasClass('toggle')) {
+            return;
+        }
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (!href || href === '#' || href === '') {
+            return;
+        }
+
+        $sidebar.addClass('inactive');
+
+        setTimeout(function () {
+            if (target === '_blank') {
+                window.open(href);
+            } else {
+                window.location.href = href;
+            }
+        }, 500);
+    });
+
+    // --- 4. Re-trigger the sidebar scroll lock ---
+    $window.triggerHandler('resize.sidebar-lock');
 }
