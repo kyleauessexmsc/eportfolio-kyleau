@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Part 1: Overview & Reflections - Cloud Operations and Management</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../index.html" class="logo"><strong>e-Portfolio - Kyle Au</strong></a>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h2>Part 1: Overview & Reflections</h2>
+									</header>
+
+									<!-- Section 1 -->
+									<h2 id="sec1">1. Introduction: Bridging Physical Networks and Cloud Operations</h2>
+									<p>When I commenced this module, my primary personal learning objective was to bridge my existing professional background as a network support engineer—focused on Layer 1 and Layer 2 access-layer physical infrastructure—with modern software-defined cloud computing paradigms. While I possessed a theoretical understanding of cloud service models (IaaS, PaaS, SaaS) and deployment types defined by NIST SP 800-145 (Mell and Grance, 2011), I lacked practical experience in orchestrating these models into resilient, enterprise-grade architectures.</p>
+									
+									<p>Over the 12-week progression, my understanding transformed from abstract concepts into concrete engineering design, structured through three key assignment milestones:</p>
+									<ul>
+										<li><strong>Unit 6:</strong> Formulating the strategic hybrid cloud proposal during the team project (Cloud Infrastructure and Framework Report).</li>
+										<li><strong>Unit 11:</strong> Expanding the architecture into an individual project (Executive Summary and Assessment report).</li>
+										<li><strong>Unit 12:</strong> Consolidating module-wide insights, practical skill development, and reflective evaluations into this Individual Module e-Portfolio.</li>
+									</ul>
+									
+									<p>Designing the AFX architecture across these milestones served as an ideal practical vehicle. It challenged me to critically evaluate how physical colocation data centers can be seamlessly integrated with elastic public cloud services (AWS) using Infrastructure as Code (IaC). This e-Portfolio provides a structured reflection on my learning journey, evaluating how specific weekly topics influenced my technical growth and reshaped my perspective on modern IT practices.</p>
+
+									<hr class="major" />
+
+									<!-- Section 2 -->
+									<h2 id="sec2">2. Weekly Reflections: Transforming Concepts into Architectural Design</h2>
+									
+									<h3>2.1 [Unit 1-4] Infrastructure as Code (IaC) and Architectural Frameworks</h3>
+									<p>Coming from an environment where network switches and routers are provisioned through manual Command Line Interface (CLI) configurations, exploring TOGAF and Infrastructure as Code (IaC) during Week 4 was a major paradigm shift. Initially, I was skeptical about fully automating network provisioning, fearing a loss of granular control over physical paths. However, moving from conceptual discussions in our early team framework toward architecting the AFX cloud environment with HashiCorp Terraform in my individual assessment report (Unit 11) demonstrated the immense value of declarative infrastructure. Defining the AFX 3-Tier VPC with sub-second routing logic repeatedly without configuration drift was a revelation (Morris, 2020). It made me realize that IaC elevates an engineer’s role from manual operator to architectural designer.</p>
+
+									<h3>2.2 [Unit 5-6] AI-Driven Cloud Automation</h3>
+									<p>Before Week 5-6, I viewed Artificial Intelligence in cloud management primarily as an overhyped buzzword. My perspective shifted when researching AI-driven operational tools for the team project milestone. I integrated Amazon Kinesis and SageMaker into the AFX post-trade pipeline for real-time market anomaly detection. A key reflective moment occurred in our module's Discussion Forum, where I debated with peers regarding whether inline AI models introduce unacceptable processing latency. This interaction led me to refine the final individual project design: isolating AI inference asynchronously within private cloud subnets while keeping core matching engines on-premises. This taught me that successful AI integration relies heavily on strategic architectural placement rather than algorithm complexity alone.</p>
+
+									<h3>2.3 [Unit 7-8] Hybrid Cloud Solutions and Cloud-Native Resilience</h3>
+									<p>Week 7-8 focused on cloud-native methodologies and hybrid topologies, forming the technical backbone of my individual assessment report. Initially, I assumed enterprise IT trends leaned toward 100% public cloud migration. However, analyzing hybrid solutions proved that for latency-sensitive financial exchanges or secure public sector bodies, a hybrid approach is mandatory. Designing dual 10 Gbps AWS Direct Connect links with BGP dynamic routing allowed me to connect physical colocation servers with elastic AWS microservices. This reinforced my understanding that cloud computing’s true power lies in extending existing physical infrastructure through high-speed, secure interconnectivity.</p>
+
+									<h3>2.4 [Unit 9-10] Cloud Security, Compliance, and Disaster Recovery</h3>
+									<p>Security in multi-tenant environments often feels abstract under the Shared Responsibility Model. Week 10’s focus on ISO/IEC 27001 and GDPR compliance provided a concrete governance framework. While developing the risk assessment matrix (Table 1) for the individual project report, I realized that compliance cannot be treated as a post-deployment checklist; it must be engineered directly into the IaC pipeline. Designing automated guardrails using Terraform Sentinel to restrict cross-border data replication (satisfying GDPR) and configuring immutable Write-Once-Read-Many (WORM) S3 buckets for audit trails shifted my mindset from viewing security as a static firewall to an automated, continuous governance pipeline.</p>
+
+									<h3>2.5 [Unit 11-12] Future Trends – Quantum Computing and Future-Proofing</h3>
+									<p>The final week’s exploration of emerging technologies pushed me to look beyond current cloud capabilities. The threat posed by quantum computing to traditional public-key encryption (RSA/ECC) was particularly eye-opening. Reflecting on the "harvest now, decrypt later" cyber-attack strategy, I was inspired during Unit 12 to validate the forward-looking recommendations included in the individual project report. Researching NIST-standardized Post-Quantum Cryptography (PQC) algorithms, such as ML-KEM (Kyber) for key encapsulation (NIST, 2024), highlighted a fundamental truth: cloud architects must design infrastructures today that remain resilient against the computational realities of tomorrow.</p>
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<!-- Content loaded dynamically from sidebar.html -->
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../sidebar-loader.js"></script>
+	</body>
+</html>
