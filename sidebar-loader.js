@@ -4,7 +4,7 @@
  * then re-initialises Editorial's sidebar interaction logic.
  */
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('sidebar.html')
+    fetch('/eportfolio-kyleau/sidebar.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to load sidebar: ' + response.status);
