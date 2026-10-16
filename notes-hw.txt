@@ -3,6 +3,7 @@ About e-Portfolio
 
 This e-Portfolio documents my learning, reflections, and activities from the MSc Cyber Security course.At present, it includes work from the Advanced Object-Oriented Design and Programming module.
 It currently features work from the Advanced Object-Oriented Design and Programming module, including a thread-safe banking system developed in Python, exploration of design patterns, and reflections on professional skill development.
+
 =================================
 ok below is the brief summary of the lecture concepts/knowledges. I think we don't need to cover/mention all of them in the hw3 (word count is limited to ~2,000 words!). We just need to pick some to discuss, extend or elaborate. If you need more lecture info of the chosen concepts/sections, please tell me to give you more.
 [brief lecture summary]
