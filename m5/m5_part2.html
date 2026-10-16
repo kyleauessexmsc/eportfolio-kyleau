@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Part 2: Technical Application & Roadmap - Cloud Operations and Management</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../index.html" class="logo"><strong>e-Portfolio - Kyle Au</strong></a>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h2>Part 2: Technical Application & Roadmap</h2>
+									</header>
+
+									<!-- Section 3 -->
+									<h2 id="sec3">3. Skills Development: Bridging Network Engineering and Cloud Operations</h2>
+									<p>Throughout this module, my technical skill set underwent a structured evolution, moving from physical hardware CLI management to software-defined cloud orchestration.</p>
+
+									<h3>Technical Skill Set Progression</h3>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Stage / Level</th>
+													<th>Competency Focus</th>
+													<th>Technical Capabilities & Architectural Artifacts</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><strong>Stage 1: Baseline</strong></td>
+													<td><strong>Physical & Network Infrastructure</strong></td>
+													<td>
+														<ul>
+															<li>Layer 1 and Layer 2 access-layer physical switching.</li>
+															<li>Manual CLI device provisioning and VLAN configuration.</li>
+															<li>Physical routing and hardware maintenance.</li>
+														</ul>
+													</td>
+												</tr>
+												<tr>
+													<td><strong>Stage 2: Intermediate</strong></td>
+													<td><strong>Cloud Automation & IaC</strong></td>
+													<td>
+														<ul>
+															<li>Declarative Infrastructure as Code (IaC) using HashiCorp Terraform.</li>
+															<li>Amazon S3 remote state backends with DynamoDB state locking.</li>
+															<li>Policy-as-Code automated guardrails using HashiCorp Sentinel.</li>
+														</ul>
+													</td>
+												</tr>
+												<tr>
+													<td><strong>Stage 3: Advanced</strong></td>
+													<td><strong>Hybrid Architecture & Governance</strong></td>
+													<td>
+														<ul>
+															<li>Sub-second BGP/BFD dynamic failover (&lt;500ms) with Scrapli/Python automation.</li>
+															<li>CDE Tokenization microservices (AWS KMS + DynamoDB) for PCI DSS v4.0.</li>
+															<li>Immutable WORM audit trails (AWS CloudTrail + S3 Object Lock) for ISO/IEC 27001.</li>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<h3>3.1 Infrastructure as Code (IaC) and State Management</h3>
+									<p>My most significant technical growth in cloud automation occurred during the transition from our high-level team framework to the detailed technical design of the individual assessment report. I mastered declarative configuration principles using HashiCorp Terraform, learning to evaluate and structure modular IaC templates for the AFX architecture. To support collaborative DevSecOps workflows, I designed Amazon S3 remote state backends accompanied by DynamoDB state locking to prevent deployment race conditions. Furthermore, incorporating Policy-as-Code via HashiCorp Sentinel enabled pre-deployment security validation, directly operationalizing concepts I have learnt.</p>
+
+									<h3>3.2 Advanced Hybrid Routing and Automated Failover</h3>
+									<p>Leveraging my physical networking background, I translated traditional routing mechanics into hybrid cloud environments. For my individual assessment report (submitted at Unit 11), I designed a redundant 10 Gbps AWS Direct Connect topology utilizing Border Gateway Protocol (BGP). To satisfy sub-second failover requirements for capital markets, I integrated sub-second Bidirectional Forwarding Detection (BFD) paired with Scrapli/Python automation. This setup dynamically adjusts BGP Local Preference attributes (from 200 to 90) and applies AS-PATH prepending upon detecting link degradation, achieving deterministic route failover under 500 milliseconds across Transit Gateways.</p>
+
+									<h3>3.3 Security Engineering and Automated Governance</h3>
+									<p>Developing technical mitigation strategies for the individual assessment deepened my practical knowledge of regulatory compliance. I gained proficiency in designing Cardholder Data Environment (CDE) tokenization microservices using AWS KMS and Amazon DynamoDB, effectively isolating sensitive financial payloads and reducing PCI DSS v4.0 audit scope. Additionally, configuring AWS CloudTrail audit streams targeting isolated S3 buckets with Object Lock in Compliance Mode allowed me to successfully engineer a WORM storage architecture meeting strict ISO/IEC 27001 forensic standards.</p>
+
+									<hr class="major" />
+
+									<!-- Section 4 -->
+									<h2 id="sec4">4. Application to Industry: Financial Market Infrastructure</h2>
+									<p>Applying cloud computing principles to real-world industrial contexts requires a nuanced understanding of domain-specific constraints, particularly within high-frequency trading (HFT) and capital markets (e.g., HKEX, CME, or global equities exchanges).</p>
+
+									<h3>4.1 The Hybrid Reality: Balancing Determinism and Elasticity</h3>
+									<p>A central insight gained across the team and individual project lifecycles is that a single public cloud model is inadequate for financial exchange infrastructure. Core order-matching engines demand physical colocation, customized kernel bypass network cards, and deterministic microsecond processing at Layers 1 and 2—performance profiles that multi-tenant public cloud hypervisors cannot guarantee. Conversely, building on-premises physical capacity for bursty post-trade processing, historical backtesting, and AI market surveillance is cost-prohibitive.</p>
+									<p>The solution lies in a strategically segmented hybrid cloud model (NIST SP 800-145). As demonstrated in the AFX design, keeping execution on-premises while piping market data feeds via Direct Connect to elastic AWS microservices (EC2 Auto Scaling Groups, Kinesis, and SageMaker) allows financial institutions to scale compute dynamically during market open/close surges while preserving deterministic matching loops.</p>
+
+									<h3>4.2 Regulatory Governance and Data Sovereignty</h3>
+									<p>In capital markets, compliance defines operational boundaries. Financial entities operating across global jurisdictions face strict data sovereignty laws, including GDPR and regional guidelines (such as Hong Kong SFC rules). Cloud adoption in this sector demands verifiable geographic boundaries. As implemented in my individual project report, using IaC guardrails to lock resource provisioning to designated geographic AWS Regions, combined with strict regional AWS KMS key policies, ensures raw transactional data cannot be replicated cross-border without authorization. Tokenization microservices paired with stateful micro-segmentation prove that public cloud infrastructure can achieve or exceed traditional on-premises security baselines.</p>
+
+									<hr class="major" />
+
+									<!-- Section 5 -->
+									<h2 id="sec5">5. Future Learning Goals: Post-Module Career Development</h2>
+									<p>Reflecting on my progress from Unit 1 through Unit 12, this module has not only expanded my technical knowledge but also reshaped my long-term career trajectory within network engineering and cyber security. As cloud technologies continue to evolve rapidly, maintaining technical relevance requires a structured, forward-looking learning roadmap.</p>
+
+									<h3>12-to-24 Month Professional Development Roadmap</h3>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Phase / Timeframe</th>
+													<th>Focus Area</th>
+													<th>Key Objectives & Technical Deliverables</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><strong>Phase 1: Months 1–6</strong></td>
+													<td><strong>Advanced Network Automation & DevSecOps</strong></td>
+													<td>
+														<ul>
+															<li>Master Python-based orchestration frameworks (Netmiko, Scrapli, Nornir).</li>
+															<li>Integrate automated CI/CD pipelines (e.g., GitLab CI) for hybrid cloud configuration validation across physical switches and VPCs.</li>
+														</ul>
+													</td>
+												</tr>
+												<tr>
+													<td><strong>Phase 2: Months 6–12</strong></td>
+													<td><strong>Cloud Architecture Professional Certification</strong></td>
+													<td>
+														<ul>
+															<li>Prepare for and achieve the AWS Certified Solutions Architect – Professional certification.</li>
+															<li>Deepen technical expertise in Multi-Region Transit Gateway topologies, hybrid BGP route propagation, and cross-region disaster recovery frameworks.</li>
+														</ul>
+													</td>
+												</tr>
+												<tr>
+													<td><strong>Phase 3: Months 12–24</strong></td>
+													<td><strong>Post-Quantum & Security Engineering</strong></td>
+													<td>
+														<ul>
+															<li>Study NIST Post-Quantum Cryptography (PQC) standards, focusing on ML-KEM (Kyber) algorithms for key encapsulation.</li>
+															<li>Implement hybrid post-quantum TLS tunnels and MACsec Layer-2 encryption prototypes for future-proof hybrid cloud connectivity.</li>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<h3>5.1 Objective 1: Advanced Network Automation & DevSecOps (Months 1–6)</h3>
+									<p>Building upon the Ansible and Python automation concepts explored in Unit 6 and Unit 8, my immediate goal is to advance my scripting skills for hybrid environments. I plan to master Python network automation frameworks (Nornir and Scrapli) and integrate them into GitLab CI/CD pipelines, automating configuration validation across both physical switches and cloud VPCs.</p>
+
+									<h3>5.2 Objective 2: Professional Cloud Architecture Certification (Months 6–12)</h3>
+									<p>To validate the strategic and technical competencies developed throughout the team and individual module assessments, I intend to pursue the AWS Certified Solutions Architect – Professional certification. My preparation will focus on advanced networking specializations, including complex Transit Gateway topologies, hybrid BGP route propagation, and Multi-Region disaster recovery frameworks.</p>
+
+									<h3>5.3 Objective 3: Post-Quantum Security Preparedness (Months 12–24)</h3>
+									<p>Inspired by our Unit 12 discussions on emerging trends, my long-term goal is to specialize in Post-Quantum Cryptography (PQC) integration for enterprise networks. As quantum computing advances, traditional public-key infrastructure will become vulnerable. I plan to research NIST-standardized PQC algorithms (such as ML-KEM) and explore how hybrid post-quantum TLS tunnels and MACsec layer-2 encryption can be implemented within hybrid cloud architectures, ensuring my skill set remains resilient for the next decade.</p>
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<!-- Content loaded dynamically from sidebar.html -->
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../sidebar-loader.js"></script>
+	</body>
+</html>
